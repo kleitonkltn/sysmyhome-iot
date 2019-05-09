@@ -4,7 +4,7 @@
   "author": "k.rocha.tech",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www",
+    "start": "node ./bin/www",
     "postinstall": "bower install"
   },
   "dependencies": {
