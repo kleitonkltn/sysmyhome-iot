@@ -13,7 +13,8 @@ router.post('/addAgendamento', (req, res) => {
         luzQuarto: req.body.luzQuarto,
         tv: req.body.tv
     }).then(function () {
-        res.send("Agendamento Criado com Sucesso!" + JSON.stringify(req.body));
+
+        res.redirect("/agendamentos");
     }).catch(function (erro) {
         res.send("Erro:" + erro);
     })
@@ -26,7 +27,7 @@ router.post('/destroy', (req, res) => {
             id: req.body.id
         }
     }).then(() => {
-        res.render('agendamentos', {msg: "Agendamento Excluido com Suscesso"})
+        res.redirect("/agendamentos");
     });
 
 
