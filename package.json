@@ -1,6 +1,6 @@
 {
   "name": "websocket-archtype",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "author": "k.rocha.tech",
   "private": true,
   "scripts": {
@@ -32,13 +32,5 @@
   "description": "Internet das Coisas",
   "main": "app.js",
   "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RichardRibeiro/FrontEndHome.git"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/RichardRibeiro/FrontEndHome/issues"
-  },
-  "homepage": "https://github.com/RichardRibeiro/FrontEndHome#readme"
+  "license": "ISC"
 }
