@@ -1,0 +1,48 @@
+<h2>Novo Agendamento</h2>
+<hr>
+<form action="/actions/addAgendamento" method="POST">
+    <div class="form-group">
+        <b>Date:</b>
+        <input class="form-control" type="date" name="data">
+
+    </div>
+    <div>
+        <b>Time:</b>
+        <input class="form-control" type="time" name="hora">
+    </div>
+
+    <br>
+    <table>
+        <thead>
+
+        </thead>
+        <tbody>
+        <tr>
+            <td>Ventilador</td>
+            <td><input type="radio" name="ventilador" value="on"> Ligar<br></td>
+            <td><input type="radio" name="ventilador" value="off"> Desligar<br></td>
+
+        </tr>
+        <tr>
+            <td>Luz da Sala</td>
+            <td><input type="radio" name="luzSala" value="on"> Ligar<br></td>
+            <td><input type="radio" name="luzSala" value="off"> Desligar<br></td>
+        </tr>
+        <tr>
+            <td>Luz do Quarto</td>
+            <td><input type="radio" name="luzQuarto" value="on"> Ligar<br></td>
+            <td><input type="radio" name="luzQuarto" value="off"> Desligar<br></td>
+        </tr>
+        <tr>
+            <td class="thead-dark">TV</td>
+            <td><input type="radio" name="tv" value="on"> Ligar<br></td>
+            <td><input type="radio" name="tv" value="off"> Desligar<br></td>
+        </tr>
+
+
+        </tbody>
+
+    </table>
+    <hr>
+    <button type="submit" class="btn btn-primary">CADASTRAR</button>
+</form>

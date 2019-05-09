@@ -1,0 +1,55 @@
+<div ng-controller="websocketController">
+    <div class="alert alert-info">
+        {{msg}}
+    </div>
+    <h2>Agendamentos</h2>
+    <hr class="border-bottom-2">
+    <a type="button" href="/formAgendamento" class="btn btn-success">Novo Agendamento</a>
+    <hr>
+
+
+    <table class="table table-bordered rounded">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Data</th>
+            <th scope="col">Hours</th>
+            <th scope="col">Ventilador</th>
+            <th scope="col">Luz da Sala</th>
+            <th scope="col">Luz do Quarto</th>
+            <th scope="col">TV</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Remover</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {{#each dados}}
+
+            <tr>
+                <td>{{id}}</td>
+                <td>{{data}}</td>
+                <td>{{horas}}</td>
+                <td>{{ventilador}}</td>
+                <td>{{luzSala}}</td>
+                <td>{{luzQuarto}}</td>
+                <td>{{tv}}</td>
+                <td align="center">
+                    <form method="post" action="/actions/edit">
+                        <button name="id" value="{{id}}" class="btn btn-primary">Editar</button>
+                    </form>
+                </td>
+                <td align="center">
+                    <form method="post" action="/actions/destroy">
+                        <button name="id" value="{{id}}" class="btn btn-danger">Remover</button>
+                    </form>
+                </td>
+            </tr>
+        {{/each}}
+
+
+
+
+        </tbody>
+    </table>
+</div>
