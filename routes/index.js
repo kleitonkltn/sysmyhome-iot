@@ -12,9 +12,11 @@ router.get('/agendamentos', function (req, res) {
     })
 });
 
+
 router.get('/formAgendamento', function (req, res, next) {
     res.render("novoAgendamento")
 });
+
 router.post('/novo', (req, res) => {
     res.send(req.body.tv);
 });

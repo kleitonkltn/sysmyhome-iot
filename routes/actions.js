@@ -20,6 +20,13 @@ router.post('/addAgendamento', (req, res) => {
     })
 
 });
+router.get('/todosAgendamentos', function (req, res) {
+    Agendamento.findAll().then(agendamentos => {
+        return res.json(agendamentos);
+    })
+});
+
+
 router.post('/destroy', (req, res) => {
 
     Agendamento.destroy({
