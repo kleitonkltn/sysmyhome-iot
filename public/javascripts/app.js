@@ -1,1 +1,1 @@
-angular.module("websocket-archtype", ["ngWebSocket","ngRoute"]);
+angular.module("websocket-archtype", ["ngWebSocket"]);
