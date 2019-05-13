@@ -15,14 +15,17 @@ angular.module("websocket-archtype").controller("websocketController",
         });
 
 
-        $scope.ligar = function () {
+        $scope.enviarAgendamentos = function () {
 
             $http.get(urlbase + "/actions/todosAgendamentos")
                 .then(function (response) {
                     if (response != null) {
-                        alert(JSON.stringify(response.data));
-                        $scope.agendamentos = response.data;
-                        enviar();
+                        var r = confirm("Deseja Confirmar a ação: Enviar Agendamentos?");
+                        if (r == true) {
+                            $scope.agendamentos = response.data;
+                            enviar();
+                        }
+
                     } else {
                         alert("Agendamentos vazio");
 

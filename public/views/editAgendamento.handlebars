@@ -1,0 +1,48 @@
+<h2>Agendamento</h2>
+<hr>
+<form action="/actions/addAgendamento" method="POST">
+    <div class="form-group">
+        <b>Date:</b>
+        <input class="form-control" type="date" name="data">
+
+    </div>
+    <div>
+        <b>Time:</b>
+        <input class="form-control" type="time" name="horas">
+    </div>
+
+    <br>
+    <table>
+        <thead>
+
+        </thead>
+        <tbody>
+        <tr>
+            <td>Ventilador</td>
+            <td><input type="radio" name="ventilador" value="L"> Ligar<br></td>
+            <td><input type="radio" name="ventilador" value="D"> Desligar<br></td>
+
+        </tr>
+        <tr>
+            <td>Luz da Sala</td>
+            <td><input type="radio" name="luzSala" value="L"> Ligar<br></td>
+            <td><input type="radio" name="luzSala" value="D"> Desligar<br></td>
+        </tr>
+        <tr>
+            <td>Luz do Quarto</td>
+            <td><input type="radio" name="luzQuarto" value="L"> Ligar<br></td>
+            <td><input type="radio" name="luzQuarto" value="D"> Desligar<br></td>
+        </tr>
+        <tr>
+            <td class="thead-dark">TV</td>
+            <td><input type="radio" name="tv" value="L"> Ligar<br></td>
+            <td><input type="radio" name="tv" value="D"> Desligar<br></td>
+        </tr>
+
+
+        </tbody>
+
+    </table>
+    <hr>
+    <button type="submit" class="btn btn-primary">SALVAR ALTERAÇÕES</button>
+</form>

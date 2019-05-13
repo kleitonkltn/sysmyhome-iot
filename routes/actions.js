@@ -40,10 +40,10 @@ router.post('/destroy', (req, res) => {
 
 });
 router.post('/edit', (req, res) => {
-
-    Agendamento.findAll({where: {id: req.body.id}}).then(agendamentos => {
-        res.send('Pagina de Exclusão' + JSON.stringify(agendamentos));
-    })
+    res.render('editAgendamento')
+    // Agendamento.findAll({where: {id: req.body.id}}).then(agendamentos => {
+    //     res.render('editAgendamento', {agendamento: agendamentos});
+    // })
 });
 
 
