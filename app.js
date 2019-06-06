@@ -23,6 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.engine('handlebars', exphbs({defaultLayout: 'main',}));
 app.set('view engine', 'handlebars');
 app.set('views', __dirname + '/public/views');
+app.set('actions', __dirname + '/public/views');
 
 
 // rotas

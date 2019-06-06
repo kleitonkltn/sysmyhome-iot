@@ -1,48 +1,73 @@
-<h2>Agendamento</h2>
-<hr>
-<form action="/actions/addAgendamento" method="POST">
-    <div class="form-group">
-        <b>Date:</b>
-        <input class="form-control" type="date" name="data">
+<div>
+    <div ng-controller="editController">
+        <h2>Alterações</h2>
+        <hr>
 
+
+
+        <form action="/actions/update" method="POST">
+            <input type="hidden" name="_method" value="PUT">
+            <div class="form-group">
+                <b>Data:</b>
+                <input class="form-control" type="date" name="data" value="{{dados.data}}">
+
+            </div>
+            <div>
+                <b>Horas:</b>
+                <input class="form-control" type="time" name="horas" value="{{dados.horas}}">
+            </div>
+
+            <br>
+            <table>
+                <thead>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ventilador</td>
+
+                        <td><input type="radio" name="ventilador" value="L" id="ventiladorL">
+                            Ligar<br></td>
+                        <td><input type="radio" name="ventilador" value="D" id="ventiladorD">
+                            Desligar<br></td>
+
+                    </tr>
+                    <tr>
+                        <td>Luz da Sala</td>
+                        <td><input type="radio" name="luzSala" value="L" id="luzSalaL"> Ligar<br>
+                        </td>
+                        <td><input type="radio" name="luzSala" value="D" id="luzSalaD"> Desligar<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Luz do Quarto</td>
+                        <td><input type="radio" name="luzQuarto" value="L" id="luzQuartoL">
+                            Ligar<br></td>
+                        <td><input type="radio" name="luzQuarto" value="D" id="luzQuartoD">
+                            Desligar<br></td>
+                    </tr>
+                    <tr>
+                        <td>TV</td>
+                        <td><input type="radio" name="tv" value="L" id="tvL"> Ligar<br></td>
+                        <td><input type="radio" name="tv" value="D" id="tvD"> Desligar<br></td>
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+
+            <hr>
+            <input type="hidden" name="id" value="{{dados.id}}">
+            <button type="submit" class="btn btn-primary">SALVAR ALTERAÇÕES</button>
+        </form>
     </div>
-    <div>
-        <b>Time:</b>
-        <input class="form-control" type="time" name="horas">
-    </div>
 
-    <br>
-    <table>
-        <thead>
+</div>
 
-        </thead>
-        <tbody>
-        <tr>
-            <td>Ventilador</td>
-            <td><input type="radio" name="ventilador" value="L"> Ligar<br></td>
-            <td><input type="radio" name="ventilador" value="D"> Desligar<br></td>
-
-        </tr>
-        <tr>
-            <td>Luz da Sala</td>
-            <td><input type="radio" name="luzSala" value="L"> Ligar<br></td>
-            <td><input type="radio" name="luzSala" value="D"> Desligar<br></td>
-        </tr>
-        <tr>
-            <td>Luz do Quarto</td>
-            <td><input type="radio" name="luzQuarto" value="L"> Ligar<br></td>
-            <td><input type="radio" name="luzQuarto" value="D"> Desligar<br></td>
-        </tr>
-        <tr>
-            <td class="thead-dark">TV</td>
-            <td><input type="radio" name="tv" value="L"> Ligar<br></td>
-            <td><input type="radio" name="tv" value="D"> Desligar<br></td>
-        </tr>
-
-
-        </tbody>
-
-    </table>
-    <hr>
-    <button type="submit" class="btn btn-primary">SALVAR ALTERAÇÕES</button>
-</form>
+<script type="text/javascript">
+    window.onload = function () {
+        check("{{dados.ventilador}}", "{{dados.luzSala}}", "{{dados.luzQuarto}}", "{{dados.tv}}")
+    }
+</script>

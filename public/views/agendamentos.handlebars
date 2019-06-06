@@ -1,12 +1,14 @@
+
+
+
 <div ng-controller="websocketController">
-    <!--    <div class="alert alert-info">-->
-    <!--        {{msg}}-->
-    <!--    </div>-->
+    
     <h2>Agendamentos</h2>
     <hr class="border-bottom-2">
     <div class="form-group">
-    <a type="button" href="/formAgendamento" class="btn btn-success">Novo Agendamento</a>
-    <a type="button" href="" ng-click="enviarAgendamentos()" class="btn btn-primary float-right">Enviar Agendamentos</a>
+        <a type="button" href="/formAgendamento" class="btn btn-success">Novo Agendamento</a>
+        <a type="button" href="" ng-click="enviarAgendamentos()" class="btn btn-primary float-right">Enviar
+            Agendamentos</a>
     </div>
     <hr>
 
@@ -14,9 +16,9 @@
     <table class="table table-bordered rounded">
         <thead>
         <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Data</th>
-            <th scope="col">Hours</th>
+            
+            <th scope="col">Agendado Para:</th>
+            
             <th scope="col">Ventilador</th>
             <th scope="col">Luz da Sala</th>
             <th scope="col">Luz do Quarto</th>
@@ -30,15 +32,15 @@
         {{#each dados}}
 
             <tr>
-                <td>{{id}}</td>
-                <td>{{data}}</td>
-                <td>{{horas}}</td>
+
+                <td>  {{data}} as {{horas}} h</td>
+            
                 <td>{{ventilador}}</td>
                 <td>{{luzSala}}</td>
                 <td>{{luzQuarto}}</td>
                 <td>{{tv}}</td>
                 <td align="center">
-                    <form method="post" action="/actions/edit">
+                    <form method="post" action="/edit">
                         <button name="id" value="{{id}}" class="btn btn-primary">Editar</button>
                     </form>
                 </td>
