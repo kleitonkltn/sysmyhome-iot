@@ -13,7 +13,7 @@ router.get('/agendamentos', function (req, res) {
 
     Agendamento.findAll({
         order:
-            ['luzSala'],
+            ['data'],
         where: {data: { [Op.gte]: dataFormatada }}
     }).then(agendamentos => {
         res.render('agendamentos', { dados: agendamentos });

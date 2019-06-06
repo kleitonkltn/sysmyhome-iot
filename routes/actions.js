@@ -28,14 +28,12 @@ router.post('/addAgendamento', (req, res) => {
 
 });
 router.get('/todosAgendamentos', function (req, res) {
-    data = new Date();
+
     Agendamento.findAll({
-        order: ['luzSala'],
+        order: ['data'],
         where: {
-            where: {
-                data: {
-                    [Op.gte]: dataFormatada
-                }
+            data: {
+                [Op.gte]: dataFormatada
             }
         }
     }).then(agendamentos => {
@@ -55,7 +53,7 @@ router.post('/destroy', (req, res) => {
     });
 });
 
-router.put('/update', (req, res) => {
+router.post('/update', (req, res) => {
     Agendamento.update({
         data: req.body.data,
         horas: req.body.horas,
