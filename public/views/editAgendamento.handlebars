@@ -9,12 +9,12 @@
             
             <div class="form-group">
                 <b>Data:</b>
-                <input class="form-control" type="date" name="data" value="{{dados.data}}">
+                <input class="form-control" type="date" name="data" value="{{dados.data}}" required>
 
             </div>
             <div>
                 <b>Horas:</b>
-                <input class="form-control" type="time" name="horas" value="{{dados.horas}}">
+                <input class="form-control" type="time" name="horas" value="{{dados.horas}}" required>
             </div>
 
             <br>
@@ -26,29 +26,29 @@
                     <tr>
                         <td>Ventilador</td>
 
-                        <td><input type="radio" name="ventilador" value="L" id="ventiladorL">
+                        <td><input type="radio" name="ventilador" value="L" id="ventiladorL"  required>
                             Ligar<br></td>
-                        <td><input type="radio" name="ventilador" value="D" id="ventiladorD">
+                        <td><input type="radio" name="ventilador" value="D" id="ventiladorD" >
                             Desligar<br></td>
 
                     </tr>
                     <tr>
                         <td>Luz da Sala</td>
-                        <td><input type="radio" name="luzSala" value="L" id="luzSalaL"> Ligar<br>
+                        <td><input type="radio" name="luzSala" value="L" id="luzSalaL"  required> Ligar<br>
                         </td>
                         <td><input type="radio" name="luzSala" value="D" id="luzSalaD"> Desligar<br>
                         </td>
                     </tr>
                     <tr>
                         <td>Luz do Quarto</td>
-                        <td><input type="radio" name="luzQuarto" value="L" id="luzQuartoL">
+                        <td><input type="radio" name="luzQuarto" value="L" id="luzQuartoL"  required>
                             Ligar<br></td>
                         <td><input type="radio" name="luzQuarto" value="D" id="luzQuartoD">
                             Desligar<br></td>
                     </tr>
                     <tr>
                         <td>TV</td>
-                        <td><input type="radio" name="tv" value="L" id="tvL"> Ligar<br></td>
+                        <td><input type="radio" name="tv" value="L" id="tvL"  required> Ligar<br></td>
                         <td><input type="radio" name="tv" value="D" id="tvD"> Desligar<br></td>
                     </tr>
 

@@ -1,7 +1,7 @@
 angular.module("websocket-archtype").controller("websocketController",
     function ($scope, $websocket, $http) {
-        var urlbase = window.location.origin;
         var host = window.location.host;
+        var urlbase = "http://"+host;
         var dataStream = $websocket('ws://' + host + '/iot/websocket');
         dataStream.onMessage(function (msg) {
             var dados = JSON.parse(msg.data);
